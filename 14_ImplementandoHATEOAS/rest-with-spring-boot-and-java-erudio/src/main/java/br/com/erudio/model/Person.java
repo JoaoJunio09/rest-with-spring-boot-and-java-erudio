@@ -1,22 +1,32 @@
-package br.com.erudio.data.dto;
+package br.com.erudio.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-public class PersonDTO implements Serializable {
+@Entity
+@Table(name = "person")
+public class Person implements Serializable {
     private static final long serialVersion = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "first_name", nullable = false, length = 80)
     private String firstName;
+
+    @Column(name = "last_name", nullable = false, length = 80)
     private String lastName;
+
+    @Column(nullable = false, length = 100)
     private String address;
+
+    @Column(nullable = false, length = 6)
     private String gender;
 
-    public PersonDTO() {
+    public Person() {
     }
 
     public String getGender() {
@@ -61,7 +71,7 @@ public class PersonDTO implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof PersonDTO person)) return false;
+        if (!(o instanceof Person person)) return false;
         return Objects.equals(getId(), person.getId()) && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getAddress(), person.getAddress()) && Objects.equals(getGender(), person.getGender());
     }
 
