@@ -1,5 +1,6 @@
 package br.com.erudio.services;
 
+import br.com.erudio.controllers.PersonController;
 import br.com.erudio.data.dto.PersonDTO;
 import br.com.erudio.exceptions.ResourceNotFoundException;
 import br.com.erudio.model.Person;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import static br.com.erudio.mapper.ObjectMapper.parseObject;
 import static br.com.erudio.mapper.ObjectMapper.parseListObjects;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import java.util.List;
 
@@ -26,16 +28,18 @@ public class PersonService {
 
         logger.info("Fiding all Person!");
 
-       return parseListObjects(repository.findAll(), PersonDTO.class);
+        return parseListObjects(repository.findAll(), PersonDTO.class);
     }
 
     public PersonDTO findById(Long id) {
 
         logger.info("Finding one Person!");
 
-        Person entity = repository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID : " + id));
-        return parseObject(entity, PersonDTO.class);
+        var entity = repository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID : " + id));
+        var dto = parseObject(entity, PersonDTO.class);
+        dto.add(linkTo(methodOn(PersonController.class).findById(id)).withSelfRel().withType("GET"));
+        return dto;
     }
 
     public PersonDTO create(PersonDTO person) {
