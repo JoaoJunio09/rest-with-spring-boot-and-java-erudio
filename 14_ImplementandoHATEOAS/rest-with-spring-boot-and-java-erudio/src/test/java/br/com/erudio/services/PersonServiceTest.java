@@ -39,7 +39,7 @@ class PersonServiceTest {
     }
 
     @Test
-    void findById() {
+    void findById()     {
         Person person = input.mockEntity(1);
         person.setId(1L);
         when(repository.findById(1L)).thenReturn(Optional.of(person));
