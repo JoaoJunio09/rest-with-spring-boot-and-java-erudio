@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f325dc43-3d0c-4c56-953c-4ab3cf93af32" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/data/dto/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/data/dto/BookDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/test/java/br/com/erudio/services/BookServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/test/java/br/com/erudio/services/BookServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/test/java/br/com/erudio/unittests/mapper/mocks/MockBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/src/test/java/br/com/erudio/unittests/mapper/mocks/MockBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/controllers/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/controllers/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/data/dto/BookDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/data/dto/BookDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/model/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/services/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/services/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/test-classes/br/com/erudio/services/BookServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/test-classes/br/com/erudio/services/BookServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/test-classes/br/com/erudio/unittests/mapper/mocks/MockBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/../14_ImplementandoHATEOAS/rest-with-spring-boot-and-java-erudio/target/test-classes/br/com/erudio/unittests/mapper/mocks/MockBook.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2vCOSRPYFSXKEZvcctImOfxF1f0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Startup.executor": "Run",
+    "Maven.hello-docker [clean,package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Projects/ws-intelliJ/rest-with-spring-boot-and-java-erudio/02-hello-docker-after",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f325dc43-3d0c-4c56-953c-4ab3cf93af32" name="Changes" comment="" />
+      <created>1743645589205</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743645589205</updated>
+    </task>
+    <servers />
+  </component>
+</project>
