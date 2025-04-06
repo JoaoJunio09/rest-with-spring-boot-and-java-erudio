@@ -1,8 +1,8 @@
 package br.com.erudio.controllers;
 
-import br.com.erudio.controllers.docs.BookControllerDocs;
-import br.com.erudio.data.dto.BookDTO;
-import br.com.erudio.services.BookService;
+import br.com.erudio.controllers.docs.PersonControllerDocs;
+import br.com.erudio.data.dto.PersonDTO;
+import br.com.erudio.services.PersonService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/books/v1")
-@Tag(name = "Books", description = "Endpoints for Managing Books")
-public class BookController implements BookControllerDocs {
+@RequestMapping("api/person/v1")
+@Tag(name = "People", description = "Endpoints for Managing People")
+public class PersonController implements PersonControllerDocs {
 
     @Autowired
-    private BookService service;
+    private PersonService service;
 
     @GetMapping(
         produces = {
@@ -27,7 +27,7 @@ public class BookController implements BookControllerDocs {
         }
     )
     @Override
-    public List<BookDTO> findAll() {
+    public List<PersonDTO> findAll() {
         return service.findAll();
     }
 
@@ -40,47 +40,45 @@ public class BookController implements BookControllerDocs {
         }
     )
     @Override
-    public BookDTO findById(@PathVariable Long id) {
+    public PersonDTO findById(@PathVariable Long id) {
         return service.findById(id);
     }
 
     @PostMapping(
-        consumes = {
+        produces = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
             MediaType.APPLICATION_YAML_VALUE
         },
-        produces = {
+        consumes = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
             MediaType.APPLICATION_YAML_VALUE
         }
     )
     @Override
-    public BookDTO create(@RequestBody BookDTO bookDTO) {
-        return service.create(bookDTO);
+    public PersonDTO create(@RequestBody PersonDTO person) {
+        return service.create(person);
     }
 
     @PutMapping(
-        consumes = {
+        produces = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
             MediaType.APPLICATION_YAML_VALUE
         },
-        produces = {
+        consumes = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
             MediaType.APPLICATION_YAML_VALUE
         }
     )
     @Override
-    public BookDTO update(@RequestBody BookDTO bookDTO) {
-        return service.update(bookDTO);
+    public PersonDTO update(@RequestBody PersonDTO person) {
+        return service.create(person);
     }
 
-    @DeleteMapping(
-        value = "/{id}"
-    )
+    @DeleteMapping(value = "/{id}")
     @Override
     public ResponseEntity<?> delete(@PathVariable Long id) {
         service.delete(id);
