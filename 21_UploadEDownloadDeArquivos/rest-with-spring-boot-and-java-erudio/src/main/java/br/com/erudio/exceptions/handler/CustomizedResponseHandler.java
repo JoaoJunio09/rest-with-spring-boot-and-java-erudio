@@ -35,7 +35,7 @@ public class CustomizedResponseHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(RequiredObjectIsNullException.class)
-    public ResponseEntity<ExceptionResponse> handleBadRequestExceptions(RequiredObjectIsNullException ex, WebRequest request) {
+    public ResponseEntity<ExceptionResponse> handleRequiredObjectExceptions(RequiredObjectIsNullException ex, WebRequest request) {
         ExceptionResponse exceptionResponse = new ExceptionResponse(
                 new Date(),
                 ex.getMessage(),
@@ -54,6 +54,15 @@ public class CustomizedResponseHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(FileNotFoundException.class)
     public ResponseEntity<ExceptionResponse> handleFileNotFoundExceptions(FileNotFoundException ex, WebRequest request) {
+        ExceptionResponse exceptionResponse = new ExceptionResponse(
+                new Date(),
+                ex.getMessage(),
+                request.getDescription(false));
+        return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(BadRequestlException.class)
+    public ResponseEntity<ExceptionResponse> handleBadRequestxceptions(BadRequestlException ex, WebRequest request) {
         ExceptionResponse exceptionResponse = new ExceptionResponse(
                 new Date(),
                 ex.getMessage(),
