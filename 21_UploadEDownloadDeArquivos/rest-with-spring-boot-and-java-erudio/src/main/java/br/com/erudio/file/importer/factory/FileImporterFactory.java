@@ -1,6 +1,6 @@
 package br.com.erudio.file.importer.factory;
 
-import br.com.erudio.exceptions.BadRequestlException;
+import br.com.erudio.exceptions.BadRequestException;
 import br.com.erudio.file.importer.contract.FileImporter;
 import br.com.erudio.file.importer.impl.CsvImporter;
 import br.com.erudio.file.importer.impl.XlsxImporter;
@@ -26,7 +26,7 @@ public class FileImporterFactory {
             return context.getBean(CsvImporter.class);
         }
         else {
-            throw new BadRequestlException("Invalid File Format!");
+            throw new BadRequestException("Invalid File Format!");
         }
     }
 }

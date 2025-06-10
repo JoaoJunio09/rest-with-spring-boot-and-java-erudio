@@ -61,8 +61,8 @@ public class CustomizedResponseHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(BadRequestlException.class)
-    public ResponseEntity<ExceptionResponse> handleBadRequestxceptions(BadRequestlException ex, WebRequest request) {
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<ExceptionResponse> handleBadRequestxceptions(BadRequestException ex, WebRequest request) {
         ExceptionResponse exceptionResponse = new ExceptionResponse(
                 new Date(),
                 ex.getMessage(),
