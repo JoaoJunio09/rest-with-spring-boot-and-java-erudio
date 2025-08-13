@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="92acf39f-83e6-4359-9add-ddf43b11ce58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/config/FileStorageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/config/FileStorageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/docs/FileControllerDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/docs/FileControllerDocs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/docs/PersonControllerDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/controllers/docs/PersonControllerDocs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/data/dto/UploadFileResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/data/dto/UploadFileResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/exporter/factory/FileExporterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/exporter/factory/FileExporterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/exporter/impl/CsvExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/exporter/impl/CsvExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/exporter/impl/XlsxExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/exporter/impl/XlsxExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/importer/factory/FileImporterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/importer/factory/FileImporterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/importer/impl/CsvImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/importer/impl/CsvImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/importer/impl/XlsxImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/file/importer/impl/XlsxImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/services/FileStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/services/FileStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/src/main/java/br/com/erudio/services/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/config/FileStorageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/config/FileStorageConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/controllers/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/controllers/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/controllers/docs/PersonControllerDocs.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/controllers/docs/PersonControllerDocs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/data/dto/UploadFileResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/data/dto/UploadFileResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/exporter/factory/FileExporterFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/exporter/factory/FileExporterFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/exporter/impl/CsvExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/exporter/impl/CsvExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/exporter/impl/XlsxExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/exporter/impl/XlsxExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/importer/factory/FileImporterFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/importer/factory/FileImporterFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/importer/impl/CsvImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/importer/impl/CsvImporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/importer/impl/XlsxImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/file/importer/impl/XlsxImporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/services/FileStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/services/FileStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/services/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../21_UploadEDownloadDeArquivos/rest-with-spring-boot-and-java-erudio/target/classes/br/com/erudio/services/PersonService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="31DB9MlachKuCJYnqDcJCAcojTu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Projects/ws-intelliJ/rest-with-spring-boot-and-java-erudio/23_GerandoRelatoriosProfissionaisComJasperReports/rest-with-spring-boot-and-java-erudio",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92acf39f-83e6-4359-9add-ddf43b11ce58" name="Changes" comment="" />
+      <created>1755048611260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1755048611260</updated>
+    </task>
+    <servers />
+  </component>
+</project>
