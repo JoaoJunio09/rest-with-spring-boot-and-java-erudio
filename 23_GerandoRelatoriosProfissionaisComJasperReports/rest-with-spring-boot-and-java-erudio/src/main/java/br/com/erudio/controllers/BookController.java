@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "Books", description = "Endpoints for Managing Books")
 public class BookController implements BookControllerDocs {
 
-    @Autowired
+     @Autowired
     private BookService service;
 
     @GetMapping(

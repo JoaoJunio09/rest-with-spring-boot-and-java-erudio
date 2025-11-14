@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.DelegatingPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
@@ -34,15 +33,16 @@ public class SecurityConfig {
 
     @Bean
     PasswordEncoder passwordEncoder() {
-        PasswordEncoder bcryptEncoder = new BCryptPasswordEncoder();kim8
+        PasswordEncoder pbkdf2Encoder = new Pbkdf2PasswordEncoder(
+            "", 8, 185000,
+            Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256
+        );
 
         Map<String, PasswordEncoder> encoders = new HashMap<>();
-        encoders.put("bcrypt", bcryptEncoder);
+        encoders.put("pbkdf2", pbkdf2Encoder);
+        DelegatingPasswordEncoder passwordEncoder = new DelegatingPasswordEncoder("pbkdf2", encoders);
 
-        DelegatingPasswordEncoder passwordEncoder =
-                new DelegatingPasswordEncoder("bcrypt", encoders);
-
-        passwordEncoder.setDefaultPasswordEncoderForMatches(bcryptEncoder);
+        passwordEncoder.setDefaultPasswordEncoderForMatches(pbkdf2Encoder);
         return passwordEncoder;
     }
 
@@ -51,6 +51,7 @@ public class SecurityConfig {
         return configuration.getAuthenticationManager();
     }
 
+    @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         JwtTokenFilter filter = new JwtTokenFilter(tokenProvider);
         //@formatter:off

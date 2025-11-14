@@ -1,0 +1,50 @@
+package br.com.erudio.integrationtests.controllers.withjson;
+
+import br.com.erudio.config.TestConfigs;
+import br.com.erudio.integrationtests.dto.AccountCredentialsDTO;
+import br.com.erudio.integrationtests.dto.TokenDTO;
+import br.com.erudio.integrationtests.testcontainers.AbstractIntegrationTest;
+import org.junit.jupiter.api.*;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+
+import static io.restassured.RestAssured.given;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class AuthControllerTest extends AbstractIntegrationTest {
+
+    private static TokenDTO tokenDto;
+
+    @BeforeAll
+    static void setUp() {
+        tokenDto = new TokenDTO();
+    }
+
+    @Test
+    @Order(1)
+    void signIn() {
+        AccountCredentialsDTO credentials = new AccountCredentialsDTO("joaojunio", "joaojunio");
+
+        tokenDto = given()
+            .basePath("/auth/signin")
+                .contentType(MediaType.APPLICATION_JSON_VALUE)
+                .port(TestConfigs.SERVER_PORT)
+            .body(credentials)
+                .when()
+            .post()
+                .then()
+                .statusCode(200)
+                    .extract()
+                    .body()
+                    .as(TokenDTO.class);
+        assertNotNull(tokenDto.getAccessToken());
+        assertNotNull(tokenDto.getRefreshToken());
+    }
+
+    @Test
+    @Order(2)
+    void refreshToken() {
+    }
+}

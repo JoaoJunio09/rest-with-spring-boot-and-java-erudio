@@ -1,3 +1,5 @@
+server:
+  port: 80
 cors:
   originPatterns: http://localhost:8080,http://localhost:3000,https://www.erudio.com.br,http://localhost:5500
 file:
@@ -46,6 +48,8 @@ logging:
     br.com.erudio: DEBUG
     net.sf.jasperreports.engine.*: TRACE
 spring-doc:
-  path-to-match: /api/**/v1/**
+  path-to-match:
+    - /auth/**
+    - /api/**/v1/**
   swagger-ui:
     use-root-path: true
