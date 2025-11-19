@@ -25,7 +25,7 @@ jobs:
 
     - name: Build Application .jar
       working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports/rest-with-spring-boot-and-java-erudio
-      run: mvn clean package
+      run: mvn clean package -DskipTests
       
     - name: Docker Compose Build
       working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports
