@@ -18,10 +18,10 @@ jobs:
         password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
 
     - name: Setup Java 21
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v2
       with:
         java-version: '21'
-        distribution: 'temurin'
+        distribution: 'adopt'
 
     - name: Build Application .jar
       working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports/rest-with-spring-boot-and-java-erudio
