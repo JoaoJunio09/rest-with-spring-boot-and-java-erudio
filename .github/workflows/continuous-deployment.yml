@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - "main"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,12 +25,14 @@ jobs:
         distribution: 'adopt'
         cache: maven
 
+    # COMPILA O JAR NO DIRETÓRIO CORRETO
     - name: Build Application .jar
       working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports/rest-with-spring-boot-and-java-erudio
       run: mvn clean package
-      
+
+    # BUILD DOCKER COMPOSE NO DIRETÓRIO ONDE O COMPOSE REALMENTE ESTÁ
     - name: Docker Compose Build
-      working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports/rest-with-spring-boot-and-java-erudio
+      working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports
       run: docker compose build
 
     - name: Push to Docker Hub Container Registry
