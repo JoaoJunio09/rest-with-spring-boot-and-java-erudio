@@ -28,8 +28,8 @@ jobs:
       run: mvn clean package -DskipTests
       
     - name: Docker Compose Build
-      working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports
-      run: docker compose -f ./23_GerandoRelatoriosProfissionaisComJasperReports/docker-compose.yml build
+      working-directory: ${{ github.workspace }}/23_GerandoRelatoriosProfissionaisComJasperReports
+      run: docker compose build
 
     - name: Push to Docker Hub Container Registry
       run: |
