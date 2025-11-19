@@ -10,14 +10,14 @@ services:
       MYSQL_DATABASE: rest_with_spring_boot_erudio
     ports:
       - "3310:3306"
-    expose:
-      - 3306
     networks:
       - erudio-network
+
   rest-with-spring-boot-erudio:
     image: joaojunio/rest-with-spring-boot-erudio
-    restart: always
-    build: ./rest-with-spring-boot-and-java-erudio
+    build:
+      context: ./rest-with-spring-boot-and-java-erudio
+      dockerfile: Dockerfile
     working_dir: /rest-with-spring-boot-and-java-erudio
     environment:
       TZ: America/Sao_Paulo
@@ -26,11 +26,12 @@ services:
       SPRING.DATASOURCE.PASSWORD: admin123
     command: mvn spring-boot:run
     ports:
-      - 80:80
+      - "80:80"
     depends_on:
       - db
     networks:
       - erudio-network
+
 networks:
   erudio-network:
     driver: bridge

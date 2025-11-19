@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - "main"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,7 +28,7 @@ jobs:
     - name: Build Application .jar
       working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports/rest-with-spring-boot-and-java-erudio
       run: mvn clean package
-      
+
     - name: Docker Compose Build
       working-directory: ./23_GerandoRelatoriosProfissionaisComJasperReports
       run: docker compose build
