@@ -1,0 +1,49 @@
+services:
+  db:
+    image: mysql:9.1.0
+    restart: always
+    environment:
+      TZ: America/Sao_Paulo
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: admin123
+      MYSQL_DATABASE: rest_with_spring_boot_erudio
+    ports:
+      - "3310:3306"
+    networks:
+      - erudio-network
+
+  rest-with-spring-boot-erudio:
+    image: joaojunio/rest-with-spring-boot-erudio
+    restart: always
+    working_dir: /rest-with-spring-boot-and-java-erudio
+    environment:
+      TZ: America/Sao_Paulo
+      SPRING.DATASOURCE.URL: jdbc:mysql://db:3306/rest_with_spring_boot_erudio?useTimezone=true&serverTimezone=UTC
+      SPRING.DATASOURCE.USERNAME: docker
+      SPRING.DATASOURCE.PASSWORD: admin123
+    command: mvn spring-boot:run
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    networks:
+      - erudio-network
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    restart: always
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+        - erudio-network
+
+volumes:
+  portainer_data:
+
+networks:
+  erudio-network:
+    driver: bridge

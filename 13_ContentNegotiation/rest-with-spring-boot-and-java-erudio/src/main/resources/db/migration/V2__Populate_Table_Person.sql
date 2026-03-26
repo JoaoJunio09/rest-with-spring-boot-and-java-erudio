@@ -1,1 +1,0 @@
-INSERT INTO `person` VALUES (1,'Ayrton','Senna','São Paulo - Brasil','Male'),(2,'Leonardo','da Vinci','Anchiano - Italy','Male'),(4,'Muhamamd','Ali','Kentucky - US','Male'),(6,'Nelson','Mandela','Mvezo - South Africa','Male'),(7,'Nelson','Mandela','Mvezo - South Africa','Male'),(8,'Nikola','Tesla','Smiljan - Croatia','Male');
