@@ -1,9 +1,11 @@
 package br.com.erudio.data.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.hateoas.RepresentationModel;
 import org.springframework.hateoas.server.core.Relation;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -13,7 +15,8 @@ public class BookDTO extends RepresentationModel<BookDTO> implements Serializabl
 
     private Long id;
     private String author;
-    private Date launch_date;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate launchDate;
     private Double price;
     private String title;
 
@@ -35,12 +38,12 @@ public class BookDTO extends RepresentationModel<BookDTO> implements Serializabl
         this.author = author;
     }
 
-    public Date getLaunch_date() {
-        return launch_date;
+    public LocalDate getLaunchDate() {
+        return launchDate;
     }
 
-    public void setLaunch_date(Date launch_date) {
-        this.launch_date = launch_date;
+    public void setLaunchDate(LocalDate launchDate) {
+        this.launchDate = launchDate;
     }
 
     public Double getPrice() {
@@ -63,12 +66,19 @@ public class BookDTO extends RepresentationModel<BookDTO> implements Serializabl
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
+
         BookDTO bookDTO = (BookDTO) o;
-        return Objects.equals(getId(), bookDTO.getId()) && Objects.equals(getAuthor(), bookDTO.getAuthor()) && Objects.equals(getLaunch_date(), bookDTO.getLaunch_date()) && Objects.equals(getPrice(), bookDTO.getPrice()) && Objects.equals(getTitle(), bookDTO.getTitle());
+        return Objects.equals(getId(), bookDTO.getId()) && Objects.equals(getAuthor(), bookDTO.getAuthor()) && Objects.equals(getLaunchDate(), bookDTO.getLaunchDate()) && Objects.equals(getPrice(), bookDTO.getPrice()) && Objects.equals(getTitle(), bookDTO.getTitle());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getId(), getAuthor(), getLaunch_date(), getPrice(), getTitle());
+        int result = super.hashCode();
+        result = 31 * result + Objects.hashCode(getId());
+        result = 31 * result + Objects.hashCode(getAuthor());
+        result = 31 * result + Objects.hashCode(getLaunchDate());
+        result = 31 * result + Objects.hashCode(getPrice());
+        result = 31 * result + Objects.hashCode(getTitle());
+        return result;
     }
 }

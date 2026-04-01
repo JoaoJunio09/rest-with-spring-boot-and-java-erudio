@@ -75,7 +75,7 @@ public class BookService {
         if (bookDTO == null) throw new RequiredObjectIsNullException();
 
         logger.info("Create one Book!");
-        var entity = parseObject(bookDTO, Book.class);
+        var entity = new Book(bookDTO.getId(), bookDTO.getAuthor(), bookDTO.getLaunchDate(), bookDTO.getPrice(), bookDTO.getTitle());
 
         var dto = parseObject(repository.save(entity), BookDTO.class);
         addHeteoasLinks(dto);
@@ -89,7 +89,7 @@ public class BookService {
         Book entity = repository.findById(bookDTO.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID : " + bookDTO.getId()));
         entity.setAuthor(bookDTO.getAuthor());
-        entity.setLaunchDate(bookDTO.getLaunch_date());
+        entity.setLaunchDate(bookDTO.getLaunchDate());
         entity.setPrice(bookDTO.getPrice());
         entity.setTitle(bookDTO.getTitle());
 

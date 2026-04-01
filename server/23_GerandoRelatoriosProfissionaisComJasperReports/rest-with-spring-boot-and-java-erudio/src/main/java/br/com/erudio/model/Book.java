@@ -1,8 +1,10 @@
 package br.com.erudio.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,8 +19,9 @@ public class Book implements Serializable {
     @Column(name = "author", nullable = false)
     private String author;
 
-    @Column(name = "launch_date", nullable = false, length = 6)
-    private Date launchDate;
+    @Column(name = "launch_date", nullable = false)
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate launchDate;
 
     @Column(name = "price", nullable = false)
     private Double price;
@@ -27,6 +30,14 @@ public class Book implements Serializable {
     private String title;
 
     public Book() {}
+
+    public Book(Long id, String author, LocalDate launchDate, Double price, String title) {
+        this.id = id;
+        this.author = author;
+        this.launchDate = launchDate;
+        this.price = price;
+        this.title = title;
+    }
 
     public Long getId() {
         return id;
@@ -44,11 +55,11 @@ public class Book implements Serializable {
         this.author = author;
     }
 
-    public Date getLaunchDate() {
+    public LocalDate getLaunchDate() {
         return launchDate;
     }
 
-    public void setLaunchDate(Date launchDate) {
+    public void setLaunchDate(LocalDate launchDate) {
         this.launchDate = launchDate;
     }
 
